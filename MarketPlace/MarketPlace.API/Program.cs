@@ -1,3 +1,8 @@
+using MarketPlace.API.Application.Repositories;
+using MarketPlace.Domain;
+using MarketPlace.Domain.Services;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//builder.Services.AddScoped<ClassifiedAdsService>();
+builder.Services.AddScoped<ISender, FakeSender>();
+builder.Services.AddScoped(typeof(IRepository<ClassifiedAd>), typeof(FakeRepository));
+builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 var app = builder.Build();
 

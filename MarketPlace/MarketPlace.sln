@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPlace.API", "MarketPlace.API\MarketPlace.API.csproj", "{F7A5C4D9-F145-4063-95CD-CF8956C93326}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketPlace.Domain", "MarketPlace.Domain\MarketPlace.Domain.csproj", "{6DDDFB7E-F9EF-4343-9DD2-6918EBAB0C88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Tests", "Marketplace.Tests\Marketplace.Tests.csproj", "{3EB91ED7-1B8C-44B6-AFE9-9DF6198B8975}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F7A5C4D9-F145-4063-95CD-CF8956C93326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7A5C4D9-F145-4063-95CD-CF8956C93326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7A5C4D9-F145-4063-95CD-CF8956C93326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDDFB7E-F9EF-4343-9DD2-6918EBAB0C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDDFB7E-F9EF-4343-9DD2-6918EBAB0C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDDFB7E-F9EF-4343-9DD2-6918EBAB0C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDDFB7E-F9EF-4343-9DD2-6918EBAB0C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB91ED7-1B8C-44B6-AFE9-9DF6198B8975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB91ED7-1B8C-44B6-AFE9-9DF6198B8975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB91ED7-1B8C-44B6-AFE9-9DF6198B8975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB91ED7-1B8C-44B6-AFE9-9DF6198B8975}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
