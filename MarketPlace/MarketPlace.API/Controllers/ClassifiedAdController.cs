@@ -25,5 +25,12 @@ namespace MarketPlace.API.Controllers
             var id = await mediator.Send(request);
             return Ok(id);
         }
+
+        [HttpPut("id")]
+        public async Task<IActionResult> ChangeTitle(Guid id, ChangeTitleCommand request)
+        {
+            await mediator.Send(request);
+            return Ok(id);
+        }
     }
 }

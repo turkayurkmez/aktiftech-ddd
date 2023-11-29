@@ -18,15 +18,15 @@ namespace MarketPlace.API.Application
             this.repository = repository;
         }
 
-        public void Handle(CreateAdRequest request)
-        {
-            //burada ilan oluşturulacak!
-            //
-            var classifiedAd = new ClassifiedAd(new ClassifiedAdId(request.Id), new UserId(request.OwnerId), sender);
+        //public void Handle(CreateAdRequest request)
+        //{
+        //    //burada ilan oluşturulacak!
+        //    //
+        //    var classifiedAd = new ClassifiedAd(new ClassifiedAdId(request.Id), new UserId(request.OwnerId), sender);
 
-            //repository.Save(classifiedAd);
+        //    //repository.Save(classifiedAd);
 
-        }
+        //}
 
         public async Task<int> Handle(CreateAdRequest request, CancellationToken cancellationToken)
         {
@@ -34,9 +34,10 @@ namespace MarketPlace.API.Application
             //
             var classifiedAd = new ClassifiedAd(new ClassifiedAdId(request.Id), new UserId(request.OwnerId), sender);
 
-            //repository.Save(classifiedAd);
+
+            var id = await repository.Save(classifiedAd);
             await Task.CompletedTask;
-            return 1;
+            return id;
         }
 
         //public void CreateAd() { }

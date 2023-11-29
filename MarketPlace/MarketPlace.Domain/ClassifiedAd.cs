@@ -81,6 +81,7 @@ namespace MarketPlace.Domain
                     break;
                 case DomainEvents.ClassifiedAdSentForReview e:
                     AdState = ClassifiedStatus.Pending;
+                    //event store'a bağla
                     break;
                 default:
                     break;
